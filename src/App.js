@@ -2,12 +2,23 @@ import logo from './logo.svg';
 import './App.css';
 
 function App() {
-  const person = {
-    name: "Amit",
-    age: 25
-}
+  const person = [
+    {
+        name: "Amit",
+        age: 25,
+    },
+    {
+        name: "Piyush",
+        age: 40,
+    },
+
+
+];
   return (
-    document.write(person.name , person.age)
+    person.map((v,i) => {
+      document.write(v.name+"<br>");
+      document.write(v.age+"<br>")
+    })
   )
 
 }
