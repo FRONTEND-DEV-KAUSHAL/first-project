@@ -2,31 +2,23 @@ import logo from './logo.svg';
 import './App.css';
 
 function App() {
-  const person = [
-    {
-        name: "Amit",
-        age: 25,
-        course: [
-            "C",
-            "HTML"
-        ]
-    },
-    {
-        name: "Ajay",
-        age: 40,
-        course: [
-            "Java",
-            "JavaScript"
-        ]
+  const myObj = {
+    name: "John",
+    age: 30,
+    cars: {
+        car1: "Ford",
+        car2: "BMW",
+        car3: "Fiat"
     }
-];
-  return (
-      person.map((p) => {
-        document.write(p.name);
-        document.write(p.age);
-        document.write(p.course);
-      })
-  )
+}
+for (let k in myObj) {
+  if (k == "age") {
+    
+    console.log(myObj[k]);
+  }
+
+}
+  return 
 
 }
 
