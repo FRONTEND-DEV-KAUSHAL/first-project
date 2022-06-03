@@ -2,20 +2,30 @@ import logo from './logo.svg';
 import './App.css';
 
 function App() {
-  const person = {
-    name: "Amit",
-    age: 25,
-    course: [
-        "C",
-        "HTML"
-    ]
-}
+  const person = [
+    {
+        name: "Amit",
+        age: 25,
+        course: [
+            "C",
+            "HTML"
+        ]
+    },
+    {
+        name: "Ajay",
+        age: 40,
+        course: [
+            "Java",
+            "JavaScript"
+        ]
+    }
+];
   return (
-      person.course.map((p) => {
-
-        document.write(person.name, person.age, p);
+      person.map((p) => {
+        document.write(p.name);
+        document.write(p.age);
+        document.write(p.course);
       })
-      
   )
 
 }
