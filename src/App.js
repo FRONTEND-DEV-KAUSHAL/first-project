@@ -1,13 +1,14 @@
 import logo from './logo.svg';
 import './App.css';
 import { Component } from 'react';
-import Demo from './componant/Demo';
-import City from './containers/City';
+import Time from './Containers/Time/Time.js';
+
 
 function App() {
   return (
     // <Demo/>
-    <City/>
+    // <City/>
+    <Time/>
   );
 }
 
