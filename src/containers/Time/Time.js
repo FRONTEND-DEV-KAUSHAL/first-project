@@ -29,24 +29,15 @@ class Time extends Component {
 
             if(day === 1){
              document.getElementById('day').innerHTML = "Monday"
-            } else if(day === 2){
-                document.getElementById('day').innerHTML = "tuesday"
-            } else if(day === 3){
-                document.getElementById('day').innerHTML = "wednesday"
-            } else if(day === 4){
-                document.getElementById('day').innerHTML = "thursday"
-            } else if(day === 5){
-                document.getElementById('day').innerHTML = "friday"
-            } else if(day === 6){
-                document.getElementById('day').innerHTML = "saturday"
-            } else if(day === 7){
-                document.getElementById('day').innerHTML = "sunday"
+            } else if (day === 2) {
+             document.getElementById('day').innerHTML = "tuesday"
             }
         }
         return (
             <div>
                 <p className='clock'>{this.state.time.toLocaleTimeString()}</p>
-                <h6 id='day'>{}</h6>
+                {/* <h2 id='day'>{}</h2> */}
+                <span id='day'></span>
             </div>
         );
     }
