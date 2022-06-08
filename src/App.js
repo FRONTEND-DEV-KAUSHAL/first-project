@@ -3,6 +3,7 @@ import './App.css';
 import { Component } from 'react';
 import Time from './Containers/Time/Time.js';
 import TimeFun from './Containers/Time/TimeFun';
+import Counter from './Containers/Counter/Counter';
 
 
 function App() {
@@ -10,7 +11,8 @@ function App() {
     // <Demo/>
     // <City/>
     // <Time/>
-    <TimeFun />
+    // <TimeFun />
+    <Counter />
   );
 }
 
