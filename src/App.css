@@ -15,14 +15,14 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  /* background-color: #282c34; */
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: rgb(0, 0, 0);
 }
 
 .App-link {
@@ -37,22 +37,81 @@
     transform: rotate(360deg);
   }
 }
-body{
-  background-color: black;
-  color: red;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  font-size: 96px;
-  font-family: 'Orbitron', sans-serif;
+/* body{
+  /* background-color: black; */
+  /* color: red; */
+  /* display: flex; */
+  /* justify-content: center; */
+  /* align-items: center; */
+  /* height: 100vh; */
+  /* font-size: 96px; */
+  /* font-family: 'Orbitron', sans-serif; */
+/* } */
+/* .display{/ */
+  /* width: 100%; */
+  /* height: 100vh;/ */
+/* } */
+/* .pluse ,.minuse{/ */
+  /* width: 50%; */
+  /* padding: 10px 20px;/ */
+  /* font-size: 24px; */
+/* } */ 
+.mesh-loader {
+  overflow: hidden;
+  height: inherit;
+  width: inherit;
 }
-.display{
-  width: 100%;
-  height: 100vh;
+.mesh-loader .circle {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  background: #f44336;
+  border-radius: 50%;
+  margin: -15px;
+  -webkit-animation: mesh 3s ease-in-out infinite -1.5s;
+  animation: mesh 3s ease-in-out infinite -1.5s;
 }
-.pluse ,.minuse{
-  width: 50%;
-  padding: 10px 20px;
-  font-size: 24px;
+
+.mesh-loader > div .circle:last-child {
+  -webkit-animation-delay: 0s;
+  animation-delay: 0s;
 }
+
+.mesh-loader > div {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+
+.mesh-loader > div:last-child {
+  -webkit-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+@keyframes mesh {
+  0% {
+    -webkit-transform-origin: 50% -100%;
+    transform-origin: 50% -100%;
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+  }
+  50% {
+    -webkit-transform-origin: 50% -100%;
+    transform-origin: 50% -100%;
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+  50.1% {
+    -webkit-transform-origin: 50% 200%;
+    transform-origin: 50% 200%;
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform-origin: 50% 200%;
+    transform-origin: 50% 200%;
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
